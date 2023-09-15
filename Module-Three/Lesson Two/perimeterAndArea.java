@@ -7,7 +7,7 @@
  * Date: 9.12.23
  */
 
-public class Main {
+public class perimeterAndArea {
     public static void main(String[] args) {
         // Declare variables for dimensions, perimeter, and area
         int length, width, perimeter, area, bigPerimeter, bigArea;

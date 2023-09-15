@@ -9,7 +9,7 @@
  * Total number of mints is initialized to 500, and each bag can hold 3 mints.
  */
 
-public class assignment {
+public class WeddingMints {
     public static void main(String[] args) {
         // Declare and initialize the total number of mints to 500.
         int totalMints = 500;
