@@ -7,7 +7,7 @@
  * Date: 9.13.23
  */
 
-public class activity {
+public class divisonAndRemainders {
     public static void main(String[] args) {
 
         // Declare two integer variables to store the quotient and remainder
