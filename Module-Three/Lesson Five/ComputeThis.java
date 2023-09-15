@@ -4,8 +4,8 @@
  * This class performs a series of mathematical operations and displays the results.
  * It uses Java's Math library for calculations like absolute value, square root, power, etc.
  * 
- * Author: [Your Name]
- * Last Modified: [Date]
+ * Author: Ryan Huang
+ * Last Modified: 9.15.23
  */
 public class ComputeThis {
     public static void main(String[] args) {
