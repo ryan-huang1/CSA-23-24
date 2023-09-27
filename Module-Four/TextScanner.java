@@ -1,4 +1,3 @@
-import java.io.*;
 import java.util.*;
 
 public class TextScanner {
@@ -8,5 +7,6 @@ public class TextScanner {
         System.out.print("Enter your String here: "); //Enter One Two Three
         String s = kbReader.nextLine();
         System.out.println(s);
+        kbReader.close();
     }
 }
