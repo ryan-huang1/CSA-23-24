@@ -4,52 +4,61 @@ package library;
  * Author Ryan
  * @version 1
  */
-public class Book {
+public class Book
+{
     private String title;
     private String author;
-    
-    /**
-     * Default Constructor for objects of class Book.
-     */
-    public Book() {
-        title = null;
-        author = null;
+
+    // Default constructor
+    public Book()
+    {
+        this.title = null;
+        this.author = null;
     }
-    
-    /**
-     * Normal Constructor for the Book object.
-     */
-    public Book(String t, String a) {
-        title = t;
-        author = a;
+
+    // Parameterized constructor
+    public Book(String title, String author)
+    {
+        this.title = title;
+        this.author = author;
     }
-    
-    /**
-     * Prints the specs of the Book object.
-     * @return String
-     */
-    public String toString() {
-        String str = "The specs of this book are: ";
-        str += "\n\tTitle: " + title;
-        str += "\n\tAuthor: " + author;
-        return str;
+
+    // Copy constructor
+    public Book(Book otherBook)
+    {
+        this.title = otherBook.title;
+        this.author = otherBook.author;
     }
-    
-    // Accessors (getters)
-    public String getTitle() {
-        return title;
+
+    // toString method to print book details
+    public String toString()
+    {
+        return "The specs of this book are: " +
+               "\n\tTitle: " + this.title +
+               "\n\tAuthor: " + this.author;
     }
-    
-    public String getAuthor() {
-        return author;
+
+    // Accessor for title
+    public String getTitle()
+    {
+        return this.title;
     }
-    
-    // Mutators (setters)
-    public void setTitle(String t) {
-        title = t;
+
+    // Accessor for author
+    public String getAuthor()
+    {
+        return this.author;
     }
-    
-    public void setAuthor(String a) {
-        author = a;
+
+    // Mutator for title
+    public void setTitle(String title)
+    {
+        this.title = title;
+    }
+
+    // Mutator for author
+    public void setAuthor(String author)
+    {
+        this.author = author;
     }
 }
