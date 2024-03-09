@@ -9,7 +9,8 @@ public class BankAccountTester {
         while (true) {
             System.out.println("Please enter the name to whom the account belongs (\"Exit\" to abort)");
             String name = scanner.nextLine();
-            if (name.equalsIgnoreCase("Exit")) break;
+            if (name.equalsIgnoreCase("Exit"))
+                break;
 
             System.out.println("Please enter the amount of the deposit.");
             double amount = scanner.nextDouble();
@@ -17,6 +18,7 @@ public class BankAccountTester {
 
             accounts.add(new BankAccount(name, amount));
         }
+        scanner.close();
 
         if (accounts.size() > 0) {
             BankAccount largest = accounts.get(0);
