@@ -1,5 +1,3 @@
-import java.io.*;
-
 class ColumnSums {
     public static void main(String[] args) {
         int[][] data = {
