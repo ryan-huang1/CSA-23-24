@@ -155,6 +155,55 @@ public class Picture extends SimplePicture {
     }
   }
 
+  public void mirrorGull() {
+    Pixel[][] pixels = this.getPixels2D();
+    int width = pixels[0].length;
+    int height = pixels.length;
+
+    // Loop over the left half of the image
+    for (int row = 0; row < height; row++) {
+      for (int col = 0; col < width / 2; col++) {
+        Pixel leftPixel = pixels[row][col];
+        Pixel rightPixel = pixels[row][width - col - 1]; // Find the corresponding pixel on the right half
+        rightPixel.setColor(leftPixel.getColor()); // Set the color of the right pixel to that of the left pixel
+      }
+    }
+  }
+
+  public void mirrorArms() {
+    Pixel[][] pixels = this.getPixels2D();
+    Pixel topPixel = null;
+    Pixel bottomPixel = null;
+
+    int leftArmTopRow = 155; // starting row for the left arm
+    int leftArmBottomRow = 190; // ending row for the left arm
+    int leftArmColStart = 105; // starting column for the left arm
+    int leftArmColEnd = 170; // ending column for the left arm
+
+    for (int row = leftArmTopRow; row < leftArmBottomRow; row++) {
+      for (int col = leftArmColStart,
+          mirrorCol = leftArmColEnd; col <= (leftArmColStart + leftArmColEnd) / 2; col++, mirrorCol--) {
+        topPixel = pixels[row][col];
+        bottomPixel = pixels[row][mirrorCol];
+        bottomPixel.setColor(topPixel.getColor());
+      }
+    }
+
+    int rightArmTopRow = 155; // Similar to left arm for simplicity
+    int rightArmBottomRow = 190;
+    int rightArmColStart = 230; // starting column for the right arm
+    int rightArmColEnd = 295; // ending column for the right arm
+
+    for (int row = rightArmTopRow; row < rightArmBottomRow; row++) {
+      for (int col = rightArmColStart,
+          mirrorCol = rightArmColEnd; col <= (rightArmColStart + rightArmColEnd) / 2; col++, mirrorCol--) {
+        topPixel = pixels[row][col];
+        bottomPixel = pixels[row][mirrorCol];
+        topPixel.setColor(bottomPixel.getColor());
+      }
+    }
+  }
+
   /** Mirror just part of a picture of a temple */
   public void mirrorTemple() {
     int mirrorPoint = 276;

@@ -66,6 +66,20 @@ public class PictureTester {
     beach.explore(); // Show the mirrored picture
   }
 
+  public static void testMirrorArms() {
+    Picture snowman = new Picture("snowman.jpg");
+    snowman.explore(); // Show the original picture
+    snowman.mirrorArms();
+    snowman.explore(); // Show the picture with all four arms
+  }
+
+  public static void testMirrorGull() {
+    Picture seagull = new Picture("seagull.jpg");
+    seagull.explore(); // Show the original picture
+    seagull.mirrorGull();
+    seagull.explore(); // Show the mirrored picture
+  }
+
   /**
    * Main method for testing. Every class can have a main
    * method in Java
