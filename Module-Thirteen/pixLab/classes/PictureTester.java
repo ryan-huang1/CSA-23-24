@@ -80,6 +80,19 @@ public class PictureTester {
     seagull.explore(); // Show the mirrored picture
   }
 
+  public static void testCopy() {
+    Picture beach = new Picture("beach.jpg");
+    Picture motorcycle = new Picture("motorcycle.jpg");
+    beach.copy(motorcycle, 10, 100, 20, 300, 50, 50);
+    beach.explore();
+  }
+
+  public static void testMyCollage() {
+    Picture canvas = new Picture();
+    canvas.myCollage();
+    canvas.explore();
+  }
+
   /**
    * Main method for testing. Every class can have a main
    * method in Java
