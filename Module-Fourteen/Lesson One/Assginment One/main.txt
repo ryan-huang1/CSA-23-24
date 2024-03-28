@@ -1,0 +1,27 @@
+    +---------------------------------+
+    |            Person               |
+    +---------------------------------+
+    | -name : String                  |
+    +---------------------------------+
+    | +Person(theName : String)       |
+    | +getName() : String             |
+    | +setName(theNewName : String) : boolean |
+    +---------------------------------+
+                 ^
+                 |
+                 |
+    +---------------------------------+
+    |            Employee             |
+    +---------------------------------+
+    | -static nextId : int = 1        |
+    | -id : int                       |
+    +---------------------------------+
+    | +Employee(theName : String)     |
+    | +getId() : int                  |
+    | +main(args : String[]) : void   |
+    +---------------------------------+
+
+When you see super(theName) in the constructor of a subclass (in this case, Employee), it's calling the constructor of the superclass (Person) with theName as its argument
+If it is deleted, the name attribute of the Person part of the Employee object wouldn't be initialized using the Person class's constructor
+
+To modify the program so that the run result can be "Mark 2", you can make a minor adjustment to the static variable nextId in the Employee class. Since nextId is initialized to 1 and it's incremented each time an Employee is instantiated, you would need to create an Employee object before the one you intend to print out
